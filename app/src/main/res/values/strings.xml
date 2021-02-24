@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Phum HR</string>
+
+    <string name="information">Information</string>
+    <string name="error">Error</string>
+    <string name="warning">Information</string>
+    <string name="ok">OK</string>
+    <string name="server_error">Sorry, an unexpected error occurred, please try again</string>
+    <string name="cancel">Cancel</string>
+    <string name="ignore">Ignore</string>
+    <string name="version">Version</string>
+    <string name="khmer">ភាសាខ្មែរ</string>
+    <string name="english">English</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="language">Language</string>
+    <string name="no_content">No Content</string>
+
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+</resources>
