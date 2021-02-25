@@ -14,11 +14,12 @@ public class ActivityMain extends ActivityController {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Tools.setSystemBarColor(this,R.color.white);
+        Tools.setSystemBarLight(this,R.color.white);
 
         new Handler().postDelayed(new Runnable() {
             public void run() {
-                MyFunction.getInstance().openActivity(ActivityMain.this,ActivityHome.class);
+                MyFunction.getInstance().openActivity(ActivityMain.this,ActivityLogin.class);
+                finish();
             }
         }, 1000*3);
     }

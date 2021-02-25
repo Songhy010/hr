@@ -4,11 +4,271 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:openDrawer="start"
     tools:context=".activity.ActivityHome">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <include layout="@layout/top_home_activity"/>
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/top_home_activity" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include" >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_attendance"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/attendance"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="@dimen/iv_height_1"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey_4"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_time_sheet"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/time_sheet"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="@dimen/iv_height_1"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey_4"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_holiday"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/calendar"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/iv_height_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_4"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_leave"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/leave"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="@dimen/iv_height_1"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey_4"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_over_time"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/over_time"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="@dimen/iv_height_1"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey_4"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_training"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/training"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/iv_height_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_4"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_payslip"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/payslip"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="@dimen/iv_height_1"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey_4"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_expenses"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/expense"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="@dimen/iv_height_1"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey_4"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ImageView
+                                android:src="@drawable/ic_qr_code"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
+                            <TextView
+                                android:layout_marginTop="@dimen/iv_height_15"
+                                android:text="@string/qr_code"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="@dimen/iv_height_1"
+                        android:background="@color/grey_4"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -20,16 +280,47 @@
         app:itemIconTint="@color/colorPrimary"
         app:itemTextColor="@color/black">
 
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_nav"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:textSize="@dimen/text_size_small"
-            android:paddingRight="@dimen/iv_height_10"
-            android:layout_gravity="bottom"
-            android:textColor="@color/black"
-            android:text="@string/version" />
+            android:layout_height="wrap_content"/>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="@dimen/iv_height_50">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/iv_height_1"
+                android:layout_marginLeft="@dimen/iv_height_15"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/iv_height_90"
+                android:layout_height="@dimen/iv_height_30"
+                android:src="@drawable/img_logo_biz_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V1.0.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/iv_height_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

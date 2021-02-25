@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/iv_height_5"
+    android:paddingBottom="@dimen/iv_height_5"
+    android:paddingLeft="@dimen/iv_height_8"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:padding="@dimen/iv_height_5"
+        android:src="@drawable/ic_benefits"
+        android:layout_marginLeft="@dimen/iv_height_15"
+        android:layout_width="@dimen/iv_height_30"
+        android:layout_height="@dimen/iv_height_30"/>
+    <TextView
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/white"
+        android:text="@string/qr_code"
+        android:layout_marginLeft="@dimen/iv_height_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

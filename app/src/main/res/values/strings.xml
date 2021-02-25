@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Phum HR</string>
-
+    <!--General-->
     <string name="information">Information</string>
     <string name="error">Error</string>
     <string name="warning">Information</string>
@@ -16,7 +16,24 @@
     <string name="confirm">Confirm</string>
     <string name="language">Language</string>
     <string name="no_content">No Content</string>
-
     <string name="am">AM</string>
     <string name="pm">PM</string>
+
+    <!--Login-->
+    <string name="remember_pass">Remember Password</string>
+    <string name="password">Password</string>
+    <string name="your_pass_here">Your Password Here…</string>
+    <string name="username">Username</string>
+    <string name="your_user_here">Your Username Here…</string>
+    <string name="login">Login</string>
+
+    <!--Home-->
+    <string name="attendance">Attendance</string>
+    <string name="time_sheet">Time Sheet</string>
+    <string name="leave">Leave</string>
+    <string name="over_time">Over Time</string>
+    <string name="training">Training</string>
+    <string name="payslip">Leave</string>
+    <string name="expense">Expense</string>
+    <string name="qr_code">QR Code</string>
 </resources>
