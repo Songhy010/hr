@@ -1,0 +1,63 @@
+[
+    {
+        "title":"Prosonal Information",
+        "type":0,
+        "action":"NONE",
+        "icon":""
+    },{
+        "title":"ID 00000168",
+        "type":1,
+        "action":"NONE",
+        "icon":"ic_id"
+    },{
+        "title":"semsonghy@gmail.com",
+        "type":1,
+        "action":"NONE",
+        "icon":"ic_email"
+    },{
+        "title":"Working Information",
+        "type":0,
+        "action":"NONE",
+        "icon":""
+    },{
+        "title":"Biz Solution",
+        "type":1,
+        "action":"NONE",
+        "icon":"ic_company"
+    },{
+        "title":"Development",
+        "type":1,
+        "action":"NONE",
+        "icon":"ic_department"
+    },{
+        "title":"Mobile Developer",
+        "type":1,
+        "action":"NONE",
+        "icon":"ic_position"
+    },{
+        "title":"Setting",
+        "type":0,
+        "action":"NONE",
+        "icon":""
+    },{
+        "title":"Language",
+        "type":1,
+        "action":"LANGUAGE",
+        "icon":"ic_language"
+    },{
+        "title":"Security",
+        "type":0,
+        "action":"NONE",
+        "icon":""
+    },{
+        "title":"Change Password",
+        "type":1,
+        "action":"CHANGE_PASSWORD",
+        "icon":"ic_change_pass"
+    },{
+        "title":"Logout",
+        "type":1,
+        "action":"LOGOUT",
+        "icon":"ic_logout"
+    }
+]

@@ -3,13 +3,15 @@
     <color name="launcher_background">#FFFFFF</color>
     <color name="colorPrimary">#0E75BB</color>
     <color name="colorPrimaryDark">#0E75BB</color>
+    <color name="colorPrimaryDark_50">#000E75BB</color>
     <color name="colorAccent">#8DC63F</color>
     <color name="colorAccentLight">#B0D57E</color>
 
     <color name="white">#ffffff</color>
+    <color name="white_50">#50ffffff</color>
     <color name="grey_1">#f7f7f7</color>
-    <color name="grey_2">#f2f2f2</color>
-    <color name="grey_3">#e6e6e6</color>
+    <color name="grey_2">#EFF1F6</color>
+    <color name="grey_3">#E5E5E5</color>
     <color name="grey_4">#cccccc</color>
     <color name="grey">#999999</color>
     <color name="grey_5">#666666</color>

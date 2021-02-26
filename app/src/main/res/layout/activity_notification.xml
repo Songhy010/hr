@@ -2,18 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ActivityMain">
+    tools:context=".activity.ActivityNotification">
 
-    <ImageView
-        android:padding="@dimen/iv_height_60"
+    <include
+        android:id="@+id/include_tool"
+        layout="@layout/top_home_activity" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_notification"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/img_biz_logo"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/include_tool" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

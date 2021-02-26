@@ -36,4 +36,11 @@
     <string name="payslip">Leave</string>
     <string name="expense">Expense</string>
     <string name="qr_code">QR Code</string>
+
+    <!--Profile-->
+    <string name="title_pro">Profile Setting</string>
+
+    <!--Notification-->
+    <string name="notification">Notifications</string>
+    <string name="detail">Detail</string>
 </resources>

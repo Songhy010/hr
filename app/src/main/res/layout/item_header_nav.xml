@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_layout"
     android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="@dimen/iv_height_120">
@@ -41,7 +42,7 @@
         app:layout_constraintStart_toEndOf="@+id/circleImageView" />
 
     <View
-        android:background="@color/white"
+        android:background="@color/white_50"
         android:layout_width="match_parent"
         android:layout_height="@dimen/iv_height_1"
         app:layout_constraintBottom_toBottomOf="parent" />
