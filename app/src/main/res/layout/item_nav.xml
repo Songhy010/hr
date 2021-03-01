@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:gravity="center_vertical"
+    android:id="@+id/container_layout"
     android:paddingTop="@dimen/iv_height_5"
     android:paddingBottom="@dimen/iv_height_5"
     android:paddingLeft="@dimen/iv_height_8"
@@ -8,12 +9,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <ImageView
+        android:id="@+id/iv_icon"
         android:padding="@dimen/iv_height_5"
         android:src="@drawable/ic_benefits"
         android:layout_marginLeft="@dimen/iv_height_15"
         android:layout_width="@dimen/iv_height_30"
         android:layout_height="@dimen/iv_height_30"/>
     <TextView
+        android:id="@+id/tv_title"
         android:textStyle="bold"
         android:textSize="@dimen/text_size_normal"
         android:textColor="@color/white"

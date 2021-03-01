@@ -33,6 +33,7 @@ public class AppController extends Application {
 
         Global.arData = new String[146];
 
+
        /* String s = "";
         for (int i = 0; i < Global.arData.length; i++) {
             s += Global.arData[i] + ";";

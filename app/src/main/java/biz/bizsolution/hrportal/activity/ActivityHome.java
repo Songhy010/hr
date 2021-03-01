@@ -10,15 +10,24 @@ import biz.bizsolution.hrportal.R;
 import biz.bizsolution.hrportal.adapter.AdapterNavigation;
 import biz.bizsolution.hrportal.util.MyFunction;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public class ActivityHome extends AppCompatActivity {
+
+    private static final int MANAGER = 1;
+    private static final int EMP = 0;
+    private static final int USER_STATUS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +38,10 @@ public class ActivityHome extends AppCompatActivity {
 
     private void initView() {
         initToolbar();
-
+        initNavMenu();
     }
 
     private void initToolbar() {
-        final RecyclerView recyclerNav = findViewById(R.id.recycler_nav);
-        final LinearLayoutManager manager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
-        recyclerNav.setLayoutManager(manager);
-        recyclerNav.setAdapter(new AdapterNavigation(this));
-
-
         final ImageView ivBack = findViewById(R.id.iv_back);
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +59,28 @@ public class ActivityHome extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void initNavMenu(){
+        final RecyclerView recyclerNav = findViewById(R.id.recycler_nav);
+        final LinearLayoutManager manager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        recyclerNav.setLayoutManager(manager);
+        recyclerNav.setAdapter(new AdapterNavigation(this,initMenu()));
+    }
+
+    @SuppressLint("NewApi")
+    private JSONArray initMenu() {
+        try {
+            final String menu = MyFunction.getInstance().readFileAsset(this, "hamburger.json");
+            final JSONArray array = new JSONArray(menu);
+            if(USER_STATUS == EMP){
+                array.remove(1);
+            }
+            return array;
+        } catch (Exception e) {
+            Log.e("Err", e.getMessage() + "");
+            return null;
+        }
     }
 
     public void hideNav(){

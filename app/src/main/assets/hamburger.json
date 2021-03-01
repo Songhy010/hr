@@ -1,0 +1,39 @@
+[
+    {
+        "name":"Sem Songhy",
+        "id":"00000168",
+        "icon":"img_profile",
+        "type":0
+    },{
+        "title":"Approval",
+        "status":0,
+        "icon":"ic_approval",
+        "type":1,
+        "action":"APPROVAL"
+    },{
+        "title":"Compensation & Benefits",
+        "status":1,
+        "icon":"ic_benefits",
+        "type":1,"action":"BENEFITS"
+    },{
+        "title":"Feedback",
+        "status":1,
+        "icon":"ic_feedback",
+        "type":1,"action":"FEEDBACK"
+    },{
+        "title":"Internal Rule & Policy",
+        "status":1,
+        "icon":"ic_policy",
+        "type":1,"action":"POLICY"
+    },{
+        "title":"About us",
+        "status":1,
+        "icon":"ic_about_us",
+        "type":1,"action":"ABOUT_US"
+    },{
+        "title":"Setting",
+        "status":1,
+        "icon":"ic_setting",
+        "type":1,"action":"SETTING"
+    }
+]

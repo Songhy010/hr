@@ -1621,7 +1621,7 @@ public class MyFunction {
 
     public void initLocalize(Context context, String lang) {
         if (lang.isEmpty())
-            lang = MyFunction.getInstance().getText(context, Global.arData[6]);
+            lang = Global.KM;
         Locale locale = new Locale(lang);
         Locale.setDefault(locale);
         Configuration config = new Configuration();

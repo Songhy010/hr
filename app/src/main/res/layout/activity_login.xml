@@ -24,6 +24,7 @@
         android:layout_marginBottom="@dimen/iv_height_10"
         android:text="@string/username"
         android:textColor="@color/black"
+        android:textSize="@dimen/text_size_normal"
         app:layout_constraintBottom_toTopOf="@+id/editText3"
         app:layout_constraintStart_toStartOf="@+id/editText3" />
 

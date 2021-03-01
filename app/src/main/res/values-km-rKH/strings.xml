@@ -1,23 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Phum HR</string>
-    <!--General-->
-    <string name="information">Information</string>
-    <string name="error">Error</string>
-    <string name="warning">Information</string>
-    <string name="ok">OK</string>
-    <string name="server_error">Sorry, an unexpected error occurred, please try again</string>
-    <string name="cancel">Cancel</string>
-    <string name="ignore">Ignore</string>
-    <string name="version">Version</string>
+
+    <string name="information">ព័ត៌មាន</string>
+    <string name="error">កំហុសបច្ចេកទេស</string>
+    <string name="warning">ព័ត៌មាន</string>
+    <string name="ok">យល់ព្រម</string>
+    <string name="server_error">"សូមអភ័យទោស!​ ​​កំហុសបច្ចេកទេសដោយអចេតនា​សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ"</string>
+    <string name="cancel">បោះបង់</string>
+    <string name="ignore">រំលង</string>
+    <string name="version">ជំនាន់</string>
     <string name="khmer">ភាសាខ្មែរ</string>
     <string name="english">English</string>
-    <string name="edit">Edit</string>
-    <string name="delete">Delete</string>
-    <string name="confirm">Confirm</string>
-    <string name="language">Language</string>
-    <string name="no_content">No Content</string>
-    <string name="am">AM</string>
-    <string name="pm">PM</string>
+    <string name="edit">កែប្រែ</string>
+    <string name="delete">លុបចោល</string>
+    <string name="confirm">បញ្ជាក់</string>
+    <string name="language">ភាសា</string>
+    <string name="no_content">គ្មានមាតិកា</string>
+    <string name="am">ព្រឹក</string>
+    <string name="pm">រសៀល</string>
 
     <!--Login-->
     <string name="remember_pass">Remember Password</string>
@@ -43,7 +44,6 @@
     <!--Notification-->
     <string name="notification">Notifications</string>
     <string name="detail">Detail</string>
-
 
     <!--Language-->
     <string name="change_language">Do you want to change language</string>

@@ -51,6 +51,7 @@ public class ActivityProfile extends ActivityController {
             }
         });
     }
+
     private void initList(){
         final RecyclerView recyclerView = findViewById(R.id.recycler_profile);
         final LinearLayoutManager manager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);

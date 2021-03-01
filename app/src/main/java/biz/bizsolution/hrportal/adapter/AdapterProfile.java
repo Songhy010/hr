@@ -7,12 +7,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.intellij.lang.annotations.Language;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import biz.bizsolution.hrportal.R;
+import biz.bizsolution.hrportal.activity.ActivityLanguage;
+import biz.bizsolution.hrportal.activity.ActivityLogin;
+import biz.bizsolution.hrportal.util.MyFunction;
 
 public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHolde> {
 
@@ -64,14 +69,20 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
 
             final JSONObject object = array.getJSONObject(position);
             holder.tvItem.setText(object.getString("title"));
-            int id = context.getResources().getIdentifier("biz.bizsolution.hrportal:drawable/"+object.getString("icon"), null, null);
-            holder.ivItem.setImageResource(id);
+            int img = context.getResources().getIdentifier("biz.bizsolution.hrportal:drawable/"+object.getString("icon"), null, null);
+            holder.ivItem.setImageResource(img);
             switch (object.getString("action")){
                 case LOGOUT:
                     holder.tvItem.setTextColor(context.getResources().getColor(R.color.red_700));
                     break;
                 case LANGUAGE:
                     holder.ivMore.setVisibility(View.VISIBLE);
+                    holder.containerLayout.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            MyFunction.getInstance().openActivity(context, ActivityLanguage.class);
+                        }
+                    });
                     break;
                 case CHANGE_PASSWORD:
                     holder.ivMore.setVisibility(View.VISIBLE);
@@ -93,11 +104,13 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
         private TextView tvItem;
         private ImageView ivItem;
         private ImageView ivMore;
+        private ConstraintLayout containerLayout;
         public ViewHolde(@NonNull View itemView) {
             super(itemView);
             tvItem = itemView.findViewById(R.id.tv_item);
             ivItem = itemView.findViewById(R.id.iv_item);
             ivMore = itemView.findViewById(R.id.iv_more);
+            containerLayout = itemView.findViewById(R.id.container_layout);
         }
     }
 }
