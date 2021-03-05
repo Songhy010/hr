@@ -7,21 +7,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import biz.bizsolution.hrportal.R;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-public class AdapterApproval extends RecyclerView.Adapter<AdapterApproval.ItemHolder> {
+import biz.bizsolution.hrportal.R;
+import biz.bizsolution.hrportal.activity.ActivityHome;
+import biz.bizsolution.hrportal.activity.ActivityProfile;
+import biz.bizsolution.hrportal.util.MyFunction;
+
+public class AdapterRequest extends RecyclerView.Adapter<AdapterRequest.ItemHolder> {
     private JSONArray array;
     private Context context;
     private static final int HEADER_TYPE = 0;
     private static final int BODY_TYPE = 1;
 
-    public AdapterApproval(JSONArray array, Context context) {
+    public AdapterRequest(JSONArray array, Context context) {
         this.array = array;
         this.context = context;
     }
@@ -48,7 +51,7 @@ public class AdapterApproval extends RecyclerView.Adapter<AdapterApproval.ItemHo
             final View view = LayoutInflater.from(context).inflate(R.layout.item_profile_header, parent, false);
             return new ItemHolder(view);
         } else {
-            final View view = LayoutInflater.from(context).inflate(R.layout.item_approval, parent, false);
+            final View view = LayoutInflater.from(context).inflate(R.layout.item_request, parent, false);
             return new ItemHolder(view);
         }
     }
@@ -63,10 +66,10 @@ public class AdapterApproval extends RecyclerView.Adapter<AdapterApproval.ItemHo
             } else {
                 String status = object.getString("status");
                 holder.tvStatus.setText(status);
-                if (status.equals("Approval")) {
+                if (status.equals("Approval")){
                     holder.tvApproval.setVisibility(View.VISIBLE);
                     holder.tvStatus.setVisibility(View.GONE);
-                } else {
+                }else {
                     holder.tvApproval.setVisibility(View.GONE);
                     holder.tvStatus.setVisibility(View.VISIBLE);
                 }
@@ -88,7 +91,7 @@ public class AdapterApproval extends RecyclerView.Adapter<AdapterApproval.ItemHo
     }
 
     static class ItemHolder extends RecyclerView.ViewHolder {
-        private TextView tvStatus, tvReason, tvLeaveType, tvDate, tvApproval, tvItem;
+        private TextView tvDate, tvStatus, tvReason, tvLeaveType, tvItem, tvApproval;
 
         public ItemHolder(@NonNull View itemView) {
             super(itemView);

@@ -1,6 +1,7 @@
 package biz.bizsolution.hrportal.activity;
 
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -14,7 +15,9 @@ import biz.bizsolution.hrportal.util.MyViewPager;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONObject;
@@ -29,9 +32,9 @@ public class ActivityTimeSheet extends ActivityController {
         initView();
     }
 
-
     private void initView() {
         try {
+            initToolbar();
             initProjectList(true);
             initTotalTime(true);
             initPager();
@@ -54,6 +57,25 @@ public class ActivityTimeSheet extends ActivityController {
         } catch (Exception e) {
             Log.e("Err", e.getMessage() + "");
         }
+    }
+
+    private void initToolbar() {
+        final ConstraintLayout toolLayout = findViewById(R.id.tool_layout);
+        toolLayout.setBackgroundColor(getResources().getColor(R.color.white));
+        final ImageView ivBack = findViewById(R.id.iv_back);
+        ivBack.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+        final TextView tvTitle = findViewById(R.id.tv_title);
+        tvTitle.setTextColor(getResources().getColor(R.color.black));
+        tvTitle.setText(getString(R.string.time_sheet_title));
+        final ImageView ivSearch = findViewById(R.id.iv_search);
+        ivSearch.setVisibility(View.GONE);
+
+        ivBack.setOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(android.view.View view) {
+                onBackPressed();
+            }
+        });
     }
 
     private void initTotalTime(boolean isWeekly) {

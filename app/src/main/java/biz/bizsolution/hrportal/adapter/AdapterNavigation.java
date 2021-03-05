@@ -85,7 +85,6 @@ public class AdapterNavigation extends RecyclerView.Adapter<AdapterNavigation.Vi
         } catch (Exception e) {
             Log.e("Err", e.getMessage() + "");
         }
-
     }
 
     @Override

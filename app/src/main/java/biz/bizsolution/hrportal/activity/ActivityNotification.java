@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import biz.bizsolution.hrportal.R;
 import biz.bizsolution.hrportal.adapter.AdapterNavigation;
 import biz.bizsolution.hrportal.adapter.AdapterNotification;
@@ -34,12 +35,12 @@ public class ActivityNotification extends ActivityController {
         initView();
     }
 
-    private void initView(){
+    private void initView() {
         initToolbar();
         initList();
     }
 
-    private void initToolbar(){
+    private void initToolbar() {
         final ConstraintLayout toolLayout = findViewById(R.id.tool_layout);
         toolLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         final ImageView ivBack = findViewById(R.id.iv_back);
@@ -60,11 +61,11 @@ public class ActivityNotification extends ActivityController {
         });
     }
 
-    private void initList(){
+    private void initList() {
         final RecyclerView recyclerView = findViewById(R.id.recycler_notification);
-        final LinearLayoutManager manager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
+        final LinearLayoutManager manager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(new AdapterNotification(initNotification(),this));
+        recyclerView.setAdapter(new AdapterNotification(initNotification(), this));
     }
 
 

@@ -1,6 +1,7 @@
 package biz.bizsolution.hrportal.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import biz.bizsolution.hrportal.R;
 import biz.bizsolution.hrportal.adapter.AdapterApproval;
 import biz.bizsolution.hrportal.adapter.AdapterCalendarHoliday;
+import biz.bizsolution.hrportal.util.MyFunction;
 
 
 public class FragmentApproval extends Fragment {
@@ -46,6 +48,16 @@ public class FragmentApproval extends Fragment {
         final RecyclerView recyclerApproval = root_view.findViewById(R.id.recycler_approval);
         final LinearLayoutManager manager = new LinearLayoutManager(root_view.getContext(), RecyclerView.VERTICAL, false);
         recyclerApproval.setLayoutManager(manager);
-        recyclerApproval.setAdapter(new AdapterApproval(null, root_view.getContext()));
+        recyclerApproval.setAdapter(new AdapterApproval(initRequest(), root_view.getContext()));
+    }
+
+    private JSONArray initRequest() {
+        try {
+            final String request = MyFunction.getInstance().readFileAsset(getContext(), "request.json");
+            return new JSONArray(request);
+        } catch (Exception e) {
+            Log.e("Err", e.getMessage() + "");
+            return null;
+        }
     }
 }

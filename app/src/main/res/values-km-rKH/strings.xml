@@ -46,6 +46,9 @@
     <string name="detail">Detail</string>
 
     <!--Request_Leave-->
+    <string name="request">Request</string>
+    <string name="leave_detail">Leave Details</string>
+    <string name="approval">Approval</string>
     <string name="my_request">My Requests</string>
     <string name="request_detail">Request_Detail</string>
 

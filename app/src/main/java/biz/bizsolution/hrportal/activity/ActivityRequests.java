@@ -8,7 +8,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import biz.bizsolution.hrportal.R;
+import biz.bizsolution.hrportal.adapter.AdapterPagerHoliday;
+import biz.bizsolution.hrportal.adapter.AdapterPagerRequest;
 import biz.bizsolution.hrportal.fragment.FragmentApproval;
+import biz.bizsolution.hrportal.fragment.FragmentHolidayAll;
+import biz.bizsolution.hrportal.fragment.FragmentHolidayCalendar;
 import biz.bizsolution.hrportal.fragment.FragmentRequest;
 import biz.bizsolution.hrportal.util.Tools;
 
@@ -20,11 +24,13 @@ import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ActivityRequests extends ActivityController {
-    private ViewPagerAdapter adapter;
+    private AdapterPagerRequest adapterPagerRequest;
     private TabLayout tabLayout;
 
     @Override
@@ -37,7 +43,7 @@ public class ActivityRequests extends ActivityController {
 
     private void initView() {
         initToolbar();
-        initPager();
+        initPager(null);
     }
 
     private void initToolbar() {
@@ -59,13 +65,19 @@ public class ActivityRequests extends ActivityController {
         });
     }
 
-    private void initPager() {
+    private void initPager(final JSONArray array) {
         try {
-            adapter = new ViewPagerAdapter(getSupportFragmentManager());
-            adapter.addFrag(new FragmentRequest());
-            adapter.addFrag(new FragmentApproval());
+            tabLayout = findViewById(R.id.tab);
+            final String[] titles = new String[2];
+            titles[0] = getString(R.string.request);
+            titles[1] = getString(R.string.approval);
+            adapterPagerRequest = new AdapterPagerRequest(getSupportFragmentManager(), ActivityRequests.this, titles);
+            adapterPagerRequest.addFrag(new FragmentRequest());
+            adapterPagerRequest.addFrag(new FragmentApproval());
+
             final ViewPager view_pager = findViewById(R.id.viewPager);
             view_pager.setOffscreenPageLimit(2);
+
             view_pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
                 public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -74,7 +86,7 @@ public class ActivityRequests extends ActivityController {
 
                 @Override
                 public void onPageSelected(int position) {
-
+                    highLightCurrentTab();
                 }
 
                 @Override
@@ -82,54 +94,20 @@ public class ActivityRequests extends ActivityController {
 
                 }
             });
-            view_pager.setAdapter(adapter);
-            tabLayout = findViewById(R.id.tab);
+            view_pager.setAdapter(adapterPagerRequest);
             tabLayout.setupWithViewPager(view_pager);
-
+            highLightCurrentTab();
         } catch (Exception e) {
-            Log.e("Err", e.getMessage() + "");
+            Log.e("Err", e.getMessage()+"");
         }
     }
 
-    private class ViewPagerAdapter extends FragmentPagerAdapter {
-        private String[] titles = {"Request", "Approval"};
-        private final List<Fragment> fragments = new ArrayList<>();
-
-        ViewPagerAdapter(final FragmentManager manager) {
-            super(manager);
-        }
-
-        private void addFrag(Fragment fragment) {
-            try {
-                fragments.add(fragment);
-            } catch (Exception e) {
-                Log.e("Err", e.getMessage() + "");
-            }
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            try {
-                return fragments.get(position);
-            } catch (Exception e) {
-                Log.e("Err", e.getMessage() + "");
-            }
-            return null;
-        }
-
-        @Override
-        public int getCount() {
-            return titles.length;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            try {
-                return titles[position];
-            } catch (Exception e) {
-                Log.e("Err", e.getMessage() + "");
-            }
-            return "";
+    private void highLightCurrentTab() {
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            assert tab != null;
+            tab.setCustomView(null);
+            tab.setCustomView(adapterPagerRequest.getTabView(i));
         }
     }
 }

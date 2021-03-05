@@ -1,0 +1,35 @@
+[
+  {
+    "date": "Today",
+    "type": 0
+  },
+  {
+    "reason": "go hometown",
+    "title": "Unpaid Leave",
+    "date_from": "12 Mar, 2021",
+    "date_to": "13 Mar, 2021",
+    "status": "Approval",
+    "date": "02 Mar, 2021",
+    "type": 1
+  },
+  {
+    "reason": "Wedding",
+    "title": "Special Leave",
+    "date_from": "15 Mar, 2021",
+    "date_to": "20 Mar, 2021",
+    "status": "Pending",
+    "type": 1
+  },
+  {
+    "date": "02 Mar, 2021",
+    "type": 0
+  },
+  {
+    "reason": "Busy at home",
+    "title": "Annual Leave",
+    "date_from": "12 Mar, 2021",
+    "date_to": "13 Mar, 2021",
+    "status": "Pending",
+    "type": 1
+  }
+]

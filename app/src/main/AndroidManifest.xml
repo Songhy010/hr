@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.ActivityAttendance"></activity>
+        <activity android:name=".activity.ActivityLeaveDetail"></activity>
+        <activity android:name=".activity.ActivityAttendance" />
         <activity android:name=".activity.ActivityRequests" />
         <activity android:name=".activity.ActivityRequestDetail" />
         <activity android:name=".activity.ActivityTimeSheet" />
