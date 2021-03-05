@@ -1,6 +1,5 @@
 package biz.bizsolution.hrportal.activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -11,17 +10,13 @@ import biz.bizsolution.hrportal.adapter.AdapterNavigation;
 import biz.bizsolution.hrportal.util.MyFunction;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 public class ActivityHome extends AppCompatActivity {
 
@@ -39,6 +34,7 @@ public class ActivityHome extends AppCompatActivity {
     private void initView() {
         initToolbar();
         initNavMenu();
+        initHomeMenu();
     }
 
     private void initToolbar() {
@@ -58,7 +54,6 @@ public class ActivityHome extends AppCompatActivity {
                 MyFunction.getInstance().openActivity(ActivityHome.this,ActivityNotification.class);
             }
         });
-
     }
 
     private void initNavMenu(){
@@ -86,5 +81,31 @@ public class ActivityHome extends AppCompatActivity {
     public void hideNav(){
         final DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
+    }
+
+    private void initHomeMenu(){
+        final LinearLayout calendarLayout = findViewById(R.id.calendar_layout);
+        calendarLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyFunction.getInstance().openActivity(ActivityHome.this,ActivityHoliday.class);
+            }
+        });
+
+        final LinearLayout timeSheetLayout = findViewById(R.id.time_sheet_layout);
+        timeSheetLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyFunction.getInstance().openActivity(ActivityHome.this,ActivityTimeSheet.class);
+            }
+        });
+
+        final LinearLayout leaveLayout = findViewById(R.id.leave_layout);
+        leaveLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyFunction.getInstance().openActivity(ActivityHome.this, ActivityRequests.class);
+            }
+        });
     }
 }

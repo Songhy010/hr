@@ -44,11 +44,26 @@
     <string name="notification">Notifications</string>
     <string name="detail">Detail</string>
 
+    <!--Request_Leave-->
+    <string name="my_request">My Requests</string>
+    <string name="request_detail">Request_Detail</string>
 
     <!--Language-->
     <string name="change_language">Do you want to change language</string>
 
     <!--Holiday-->
+    <string name="holiday">Company Holiday</string>
     <string name="this_month">This Month</string>
     <string name="all_holiday">All Holiday</string>
+
+    <!--Time Sheet-->
+    <string name="time_sheet_title">Time Sheet</string>
+    <string name="total_per_week">Total per week</string>
+
+
+    <!--Attendance-->
+    <string name="date">Date</string>
+    <string name="check_in">Check In</string>
+    <string name="check_out">Check Out</string>
+    <string name="working_hr">Working Hr\'s</string>
 </resources>

@@ -42,8 +42,8 @@
                             <ImageView
                                 android:tint="@color/colorPrimary"
                                 android:src="@drawable/ic_attendance"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
                                 android:text="@string/attendance"
@@ -66,8 +66,8 @@
                             <ImageView
                                 android:tint="@color/colorPrimary"
                                 android:src="@drawable/ic_time_sheet"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
                                 android:text="@string/time_sheet"
@@ -90,8 +90,8 @@
                             <ImageView
 
                                 android:src="@drawable/ic_holiday"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
                                 android:text="@string/calendar"
@@ -115,6 +115,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <LinearLayout
+                            android:id="@+id/leave_layout"
                             android:orientation="vertical"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
@@ -123,8 +124,8 @@
                             <ImageView
                                 android:tint="@color/colorPrimary"
                                 android:src="@drawable/ic_leave"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
                                 android:text="@string/leave"
@@ -146,8 +147,8 @@
                             <ImageView
                                 android:tint="@color/colorPrimary"
                                 android:src="@drawable/ic_over_time"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
                                 android:text="@string/over_time"
@@ -161,6 +162,7 @@
                             android:layout_alignParentBottom="true"
                             android:background="@drawable/line"/>
                         <LinearLayout
+                            android:id="@+id/time_sheet_layout"
                             android:orientation="vertical"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
@@ -168,12 +170,12 @@
                             android:gravity="center">
                             <ImageView
                                 android:tint="@color/colorPrimary"
-                                android:src="@drawable/ic_training"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:src="@drawable/ic_time_sheet"
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
-                                android:text="@string/training"
+                                android:text="@string/time_sheet"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_normal"                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
@@ -194,15 +196,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <LinearLayout
+                            android:id="@+id/calendar_layout"
                             android:orientation="vertical"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center">
                             <ImageView
+                                android:tint="@color/colorPrimary"
                                 android:src="@drawable/ic_holiday"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
                                 android:text="@string/calendar"
@@ -224,8 +228,8 @@
                             <ImageView
                                 android:tint="@color/colorPrimary"
                                 android:src="@drawable/ic_expenses"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
                                 android:text="@string/expense"
@@ -247,8 +251,8 @@
                             <ImageView
                                 android:tint="@color/colorPrimary"
                                 android:src="@drawable/ic_qr_code"
-                                android:layout_width="@dimen/iv_height_55"
-                                android:layout_height="@dimen/iv_height_55"/>
+                                android:layout_width="@dimen/iv_height_50"
+                                android:layout_height="@dimen/iv_height_50"/>
                             <TextView
                                 android:layout_marginTop="@dimen/iv_height_15"
                                 android:text="@string/qr_code"

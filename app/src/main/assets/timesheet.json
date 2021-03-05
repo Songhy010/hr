@@ -1,0 +1,94 @@
+{
+    "credit_hour":"2400",
+    "total_hour":"1990",
+    "project":[
+        {
+            "name":"Phum Hr",
+            "total_hour":"1610"
+        },{
+            "name":"Dealer App",
+            "total_hour":"380"
+        }
+    ],
+    "time_log":[
+        {
+            "title":"Mon 8",
+            "total_hour":"420",
+            "detail":[
+                {
+                    "total_hour":"240",
+                    "pro_name":"Phum Hr",
+                    "detail":"Create Holiday Interface"
+                },{
+                    "total_hour":"240",
+                    "pro_name":"Dealer",
+                    "detail":"Create Home Page"
+                }
+            ]
+        },{
+            "title":"Tue 9",
+            "total_hour":"420",
+            "detail":[
+                {
+                    "total_hour":"240",
+                    "pro_name":"Phum Hr",
+                    "detail":"Create Holiday Interface"
+                }
+            ]
+        },{
+            "title":"Wed 10",
+            "total_hour":"420",
+            "detail":[
+                {
+                    "total_hour":"240",
+                    "pro_name":"Phum Hr",
+                    "detail":"Create Holiday Interface"
+                },{
+                    "total_hour":"240",
+                    "pro_name":"Dealer",
+                    "detail":"Create Home Page"
+                }
+            ]
+        },{
+            "title":"Thu 11",
+            "total_hour":"420",
+            "detail":[
+                {
+                    "total_hour":"240",
+                    "pro_name":"Phum Hr",
+                    "detail":"Create Holiday Interface"
+                },{
+                    "total_hour":"240",
+                    "pro_name":"Dealer",
+                    "detail":"Create Home Page"
+                },{
+                    "total_hour":"240",
+                    "pro_name":"Dealer",
+                    "detail":"Create Home Page"
+                }
+            ]
+        },{
+            "title":"Fri 12",
+            "total_hour":"420",
+            "detail":[
+                {
+                    "total_hour":"240",
+                    "pro_name":"Phum Hr",
+                    "detail":"Create Holiday Interface"
+                },{
+                    "total_hour":"240",
+                    "pro_name":"Dealer",
+                    "detail":"Create Home Page"
+                }
+            ]
+        },{
+            "title":"Sat 13",
+            "total_hour":"0",
+            "detail":[]
+        },{
+            "title":"Sun 14",
+            "total_hour":"0",
+            "detail":[]
+        }
+    ]
+}

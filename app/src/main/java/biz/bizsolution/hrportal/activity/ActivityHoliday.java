@@ -1,21 +1,25 @@
 package biz.bizsolution.hrportal.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.ViewPager;
 import biz.bizsolution.hrportal.R;
 import biz.bizsolution.hrportal.adapter.AdapterPagerHoliday;
+import biz.bizsolution.hrportal.fragment.FragmentHolidayAll;
 import biz.bizsolution.hrportal.fragment.FragmentHolidayCalendar;
-import biz.bizsolution.hrportal.util.Global;
+import biz.bizsolution.hrportal.util.Tools;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class ActivityHoliday extends AppCompatActivity {
+public class ActivityHoliday extends ActivityController {
 
     private TabLayout tabLayout;
     private AdapterPagerHoliday adapterPagerHoliday;
@@ -24,7 +28,32 @@ public class ActivityHoliday extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_holiday);
+        Tools.setSystemBarLight(this,R.color.white);
+        initView();
+    }
+
+    private void initView(){
+        initToolbar();
         initPager(null);
+    }
+
+    private void initToolbar(){
+        final ConstraintLayout toolLayout = findViewById(R.id.tool_layout);
+        toolLayout.setBackgroundColor(getResources().getColor(R.color.white));
+        final ImageView ivBack = findViewById(R.id.iv_back);
+        ivBack.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+        final TextView tvTitle = findViewById(R.id.tv_title);
+        tvTitle.setTextColor(getResources().getColor(R.color.black));
+        tvTitle.setText(getString(R.string.holiday));
+        final ImageView ivSearch = findViewById(R.id.iv_search);
+        ivSearch.setVisibility(View.GONE);
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     private void initPager(final JSONArray array) {
@@ -35,9 +64,10 @@ public class ActivityHoliday extends AppCompatActivity {
             titles[1] = getString(R.string.all_holiday);
             adapterPagerHoliday = new AdapterPagerHoliday(getSupportFragmentManager(),this,titles);
             adapterPagerHoliday.addFrag(FragmentHolidayCalendar.newInstance(null));
+            adapterPagerHoliday.addFrag(FragmentHolidayAll.newInstance(null));
 
             final ViewPager view_pager = findViewById(R.id.viewPager);
-            view_pager.setOffscreenPageLimit(4);
+            view_pager.setOffscreenPageLimit(2);
 
             view_pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
@@ -62,6 +92,7 @@ public class ActivityHoliday extends AppCompatActivity {
             Log.e("Err", e.getMessage()+"");
         }
     }
+
     private void highLightCurrentTab() {
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);

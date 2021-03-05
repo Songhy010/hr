@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityRequestDetail">
+
+    <include layout="@layout/top_home_activity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/iv_height_15"
+            android:layout_marginTop="@dimen/iv_height_25"
+            android:text="Details"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/iv_height_25"
+            android:layout_marginTop="@dimen/iv_height_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:layout_margin="@dimen/iv_height_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Supervisor"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/tv_unit_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="Pheaktra Ky"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Leave Type"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="Annual Leave"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Start Date"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="17 Feb, 2021"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="End Date"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="18 Feb, 2021"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Start Time"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="08:00 AM"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="End Time"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="17:00 PM"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Durations"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="1 Day"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Cover By"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="Sophal Houch"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Status"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_marginLeft="@dimen/iv_height_40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=":"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/iv_height_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/iv_height_10"
+                    android:maxLines="1"
+                    android:text="Pending Approval"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </GridLayout>
+        </LinearLayout>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_marginLeft="@dimen/iv_height_15"
+            android:layout_marginTop="@dimen/iv_height_25"
+            android:text="Reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:padding="@dimen/iv_height_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:padding="@dimen/iv_height_15"
+                android:text="Go to hometown"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                android:background="@drawable/text_border_circle"
+                android:id="@+id/edt_reason"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/iv_height_120"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

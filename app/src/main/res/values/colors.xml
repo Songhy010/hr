@@ -5,7 +5,7 @@
     <color name="colorPrimaryDark">#0E75BB</color>
     <color name="colorPrimaryDark_50">#000E75BB</color>
     <color name="colorAccent">#0E75BB</color>
-    <color name="colorAccentLight">#0E75BB</color>
+    <color name="colorAccentLight">#8DC63F</color>
 
     <color name="white">#ffffff</color>
     <color name="white_50">#50ffffff</color>
@@ -48,4 +48,7 @@
     <color name="light_blue_A200">#40C4FF</color>
     <color name="light_blue_A400">#00B0FF</color>
     <color name="light_blue_A700">#0091EA</color>
+
+    <color name="orange">#F1A942</color>
+
 </resources>

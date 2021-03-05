@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.ActivityHoliday"></activity>
+        <activity android:name=".activity.ActivityAttendance"></activity>
+        <activity android:name=".activity.ActivityRequests" />
+        <activity android:name=".activity.ActivityRequestDetail" />
+        <activity android:name=".activity.ActivityTimeSheet" />
+        <activity android:name=".activity.ActivityHoliday" />
         <activity android:name=".activity.ActivityLanguage" />
         <activity android:name=".activity.ActivityNotification" />
         <activity android:name=".activity.ActivityProfile" />

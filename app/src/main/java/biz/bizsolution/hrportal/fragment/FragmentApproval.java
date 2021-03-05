@@ -1,11 +1,9 @@
 package biz.bizsolution.hrportal.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 
 import org.json.JSONArray;
 
@@ -15,20 +13,20 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import biz.bizsolution.hrportal.R;
+import biz.bizsolution.hrportal.adapter.AdapterApproval;
 import biz.bizsolution.hrportal.adapter.AdapterCalendarHoliday;
 
 
-public class FragmentHolidayCalendar extends Fragment {
+public class FragmentApproval extends Fragment {
 
     private final String TAG = "Fm NewStore";
     private View root_view;
-    private JSONArray arrPromotion;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (root_view == null) {
-            root_view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_holiday_calendar, container, false);
+            root_view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_approval, container, false);
         }
         return root_view;
     }
@@ -40,22 +38,14 @@ public class FragmentHolidayCalendar extends Fragment {
 
     }
 
-    public static final FragmentHolidayCalendar newInstance(final JSONArray arrNewStore) {
-        FragmentHolidayCalendar fragmentReferral;
-        fragmentReferral = new FragmentHolidayCalendar();
-
-        fragmentReferral.arrPromotion = arrNewStore;
-        return fragmentReferral;
+    private void initView() {
+        initRecyclerApproval();
     }
 
-    private void initView(){
-        initRecyclerHoliday();
-    }
-
-    private void initRecyclerHoliday(){
-        final RecyclerView recyclerHoliday = root_view.findViewById(R.id.recycler_holiday);
-        final LinearLayoutManager manager = new LinearLayoutManager(root_view.getContext(),RecyclerView.VERTICAL,false);
-        recyclerHoliday.setLayoutManager(manager);
-        recyclerHoliday.setAdapter(new AdapterCalendarHoliday(root_view.getContext()));
+    private void initRecyclerApproval() {
+        final RecyclerView recyclerApproval = root_view.findViewById(R.id.recycler_approval);
+        final LinearLayoutManager manager = new LinearLayoutManager(root_view.getContext(), RecyclerView.VERTICAL, false);
+        recyclerApproval.setLayoutManager(manager);
+        recyclerApproval.setAdapter(new AdapterApproval(null, root_view.getContext()));
     }
 }

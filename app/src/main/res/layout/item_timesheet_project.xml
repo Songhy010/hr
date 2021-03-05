@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/iv_height_15"
+    android:paddingRight="@dimen/iv_height_15"
+    android:paddingTop="@dimen/iv_height_15"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view3"
+        android:layout_width="@dimen/iv_height_20"
+        android:layout_height="@dimen/iv_height_20"
+        app:cardCornerRadius="@dimen/iv_height_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+        <View
+            android:layout_margin="@dimen/iv_height_3"
+            android:background="@drawable/shape_circle_stroke_accen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_project_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/iv_height_15"
+        android:text="@string/total_per_week"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintStart_toEndOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/tv_total_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/iv_height_20"
+        android:text="26h 50m"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_project_name"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

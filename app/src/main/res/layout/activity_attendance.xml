@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityAttendance">
+
+    <include
+        android:id="@+id/include5"
+        layout="@layout/top_home_activity" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/iv_height_50"
+        app:layout_constraintTop_toBottomOf="@+id/include5">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/iv_height_50"
+            android:layout_height="@dimen/iv_height_50"
+            android:padding="@dimen/iv_height_15"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="March"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/iv_height_50"
+            android:layout_height="@dimen/iv_height_50"
+            android:padding="@dimen/iv_height_15"
+            android:rotation="180"
+            android:src="@drawable/ic_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:background="@color/grey_2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/iv_height_40"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <TextView
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_small"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:text="@string/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:background="@color/grey_4"
+            android:layout_width="@dimen/iv_height_1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_small"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:text="@string/check_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:background="@color/grey_4"
+            android:layout_width="@dimen/iv_height_1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_small"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:text="@string/check_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:background="@color/grey_4"
+            android:layout_width="@dimen/iv_height_1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_small"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:text="@string/working_hr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

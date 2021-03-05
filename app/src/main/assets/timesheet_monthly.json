@@ -1,0 +1,73 @@
+{
+    "credit_hour":"90000",
+    "total_hour":"58500",
+    "project":[
+        {
+            "name":"Phum Hr",
+            "total_hour":"1500"
+        },{
+            "name":"Phum Hr",
+            "total_hour":"2000"
+        }
+    ],
+    "time_log":[
+        {
+            "title":"Feb 1-6",
+            "total_hour":"1720",
+            "detail":[
+                {
+                    "date":"2021-02-01",
+                    "time_log":[
+                        {
+                            "total_hour":"240",
+                            "pro_name":"Dealer",
+                            "detail":"Create Home Page"
+                        },{
+                            "total_hour":"240",
+                            "pro_name":"Phum HR",
+                            "detail":"Create Home Page"
+                        }
+                    ]
+                },{
+                    "date":"2021-02-02",
+                    "time_log":[
+                        {
+                            "total_hour":"240",
+                            "pro_name":"Dealer",
+                            "detail":"Create Home Page"
+                        },{
+                            "total_hour":"240",
+                            "pro_name":"Phum HR",
+                            "detail":"Create Home Page"
+                        }
+                    ]
+                },{
+                    "date":"2021-02-03",
+                    "time_log":[
+                        {
+                            "total_hour":"240",
+                            "pro_name":"Dealer",
+                            "detail":"Create Home Page"
+                        },{
+                            "total_hour":"240",
+                            "pro_name":"Phum HR",
+                            "detail":"Create Home Page"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "title":"Feb 7-13",
+            "total_hour":"420",
+            "detail":[]
+        },{
+            "title":"Feb 14-20",
+            "total_hour":"420",
+            "detail":[]
+        },{
+            "title":"Feb 2-28",
+            "total_hour":"420",
+            "detail":[]
+        }
+    ]
+}
