@@ -50,7 +50,6 @@
     <string name="leave_detail">Leave Details</string>
     <string name="approval">Approval</string>
     <string name="my_request">My Requests</string>
-    <string name="request_detail">Request_Detail</string>
 
     <!--Language-->
     <string name="change_language">Do you want to change language</string>
@@ -63,6 +62,7 @@
     <!--Time Sheet-->
     <string name="time_sheet_title">Time Sheet</string>
     <string name="total_per_week">Total per week</string>
+    <string name="new_time_entry">New Time Entry</string>
 
     <!--Attendance-->
     <string name="date">Date</string>

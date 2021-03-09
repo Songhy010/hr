@@ -8,13 +8,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 import biz.bizsolution.hrportal.R;
 import biz.bizsolution.hrportal.activity.ActivityHome;
+import biz.bizsolution.hrportal.activity.ActivityLeaveDetail;
 import biz.bizsolution.hrportal.activity.ActivityProfile;
 import biz.bizsolution.hrportal.util.MyFunction;
 
@@ -66,10 +70,10 @@ public class AdapterRequest extends RecyclerView.Adapter<AdapterRequest.ItemHold
             } else {
                 String status = object.getString("status");
                 holder.tvStatus.setText(status);
-                if (status.equals("Approval")){
+                if (status.equals("Approval")) {
                     holder.tvApproval.setVisibility(View.VISIBLE);
                     holder.tvStatus.setVisibility(View.GONE);
-                }else {
+                } else {
                     holder.tvApproval.setVisibility(View.GONE);
                     holder.tvStatus.setVisibility(View.VISIBLE);
                 }
@@ -79,6 +83,15 @@ public class AdapterRequest extends RecyclerView.Adapter<AdapterRequest.ItemHold
                 holder.tvDate.setText(object.getString("date_from") + " to " + object.getString("date_to"));
 
             }
+
+            holder.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final HashMap<String, String> map = new HashMap<>();
+                    map.put("employee", "0");
+                    MyFunction.getInstance().openActivity(context, ActivityLeaveDetail.class, map);
+                }
+            });
 
         } catch (Exception e) {
             Log.e("Err", e.getMessage() + "");
@@ -92,9 +105,11 @@ public class AdapterRequest extends RecyclerView.Adapter<AdapterRequest.ItemHold
 
     static class ItemHolder extends RecyclerView.ViewHolder {
         private TextView tvDate, tvStatus, tvReason, tvLeaveType, tvItem, tvApproval;
+        private CardView cardView;
 
         public ItemHolder(@NonNull View itemView) {
             super(itemView);
+            cardView = itemView.findViewById(R.id.card);
             tvItem = itemView.findViewById(R.id.tv_item);
             tvDate = itemView.findViewById(R.id.tv_date);
             tvStatus = itemView.findViewById(R.id.tv_status);

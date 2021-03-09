@@ -12,9 +12,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import org.json.JSONArray;
 
 import biz.bizsolution.hrportal.R;
+import biz.bizsolution.hrportal.activity.ActivityNewTimeEntry;
 import biz.bizsolution.hrportal.adapter.AdapterApproval;
 import biz.bizsolution.hrportal.adapter.AdapterRequest;
 import biz.bizsolution.hrportal.util.MyFunction;
@@ -43,6 +46,7 @@ public class FragmentRequest extends Fragment {
 
     private void initView() {
         initRecyclerApproval();
+        initAddRequest();
     }
 
     private void initRecyclerApproval() {
@@ -60,5 +64,15 @@ public class FragmentRequest extends Fragment {
             Log.e("Err", e.getMessage() + "");
             return null;
         }
+    }
+
+    private void initAddRequest() {
+        final FloatingActionButton floatingActionButton = root_view.findViewById(R.id.fab_setup);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

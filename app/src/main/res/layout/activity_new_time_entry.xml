@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityNewTimeEntry">
+
+    <include layout="@layout/top_home_activity" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/iv_height_15">
+
+            <TextView
+                android:id="@+id/tv_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:text="Project"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/relative_project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_project"
+                app:layout_constraintTop_toBottomOf="@id/tv_project">
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="@dimen/iv_height_5"
+                    app:hintText="Select Project Title" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Service"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/relative_project"
+                app:layout_constraintTop_toBottomOf="@id/relative_project" />
+
+            <RelativeLayout
+                android:id="@+id/relative_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_service"
+                app:layout_constraintTop_toBottomOf="@id/tv_service">
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spinner_server"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="@dimen/iv_height_5"
+                    app:hintText="Select Service" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/relative_service"
+                app:layout_constraintTop_toBottomOf="@id/relative_service" />
+
+            <EditText
+                android:id="@+id/edt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:background="@drawable/shape_edt"
+                android:hint="Select Date"
+                android:padding="@dimen/iv_height_13"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+            <ImageView
+                android:layout_width="@dimen/iv_height_40"
+                android:layout_height="@dimen/iv_height_40"
+                android:padding="@dimen/iv_height_10"
+                android:src="@drawable/ic_calender_date"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_date"
+                app:layout_constraintEnd_toEndOf="@+id/edt_date"
+                app:layout_constraintTop_toTopOf="@+id/edt_date"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Durations"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/edt_date"
+                app:layout_constraintTop_toBottomOf="@id/edt_date" />
+
+            <EditText
+                android:id="@+id/edt_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:background="@drawable/shape_edt"
+                android:padding="@dimen/iv_height_13"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_duration"
+                app:layout_constraintTop_toBottomOf="@id/tv_duration" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Descriptions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/edt_duration"
+                app:layout_constraintTop_toBottomOf="@id/edt_duration" />
+
+            <EditText
+                android:id="@+id/edt_description"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:background="@drawable/shape_edt"
+                android:gravity="top"
+                android:hint="Write Your Description here ..."
+                android:inputType="textMultiLine"
+                android:minLines="5"
+                android:padding="@dimen/iv_height_13"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_description"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+            <View
+                android:layout_width="@dimen/iv_height_0"
+                android:layout_height="@dimen/iv_height_100"
+                app:layout_constraintTop_toBottomOf="@id/edt_description"
+                app:layout_constraintStart_toStartOf="@id/edt_description"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_round"
+                android:text="Add New Entry"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -11,9 +11,14 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.HashMap;
+
 import biz.bizsolution.hrportal.R;
+import biz.bizsolution.hrportal.activity.ActivityLeaveDetail;
+import biz.bizsolution.hrportal.util.MyFunction;
 
 public class AdapterApproval extends RecyclerView.Adapter<AdapterApproval.ItemHolder> {
     private JSONArray array;
@@ -77,6 +82,15 @@ public class AdapterApproval extends RecyclerView.Adapter<AdapterApproval.ItemHo
 
             }
 
+            holder.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final HashMap<String, String> map = new HashMap<>();
+                    map.put("employee", "1");
+                    MyFunction.getInstance().openActivity(context, ActivityLeaveDetail.class, map);
+                }
+            });
+
         } catch (Exception e) {
             Log.e("Err", e.getMessage() + "");
         }
@@ -89,9 +103,11 @@ public class AdapterApproval extends RecyclerView.Adapter<AdapterApproval.ItemHo
 
     static class ItemHolder extends RecyclerView.ViewHolder {
         private TextView tvStatus, tvReason, tvLeaveType, tvDate, tvApproval, tvItem;
+        private CardView cardView;
 
         public ItemHolder(@NonNull View itemView) {
             super(itemView);
+            cardView = itemView.findViewById(R.id.card_approval);
             tvItem = itemView.findViewById(R.id.tv_item);
             tvDate = itemView.findViewById(R.id.tv_date);
             tvStatus = itemView.findViewById(R.id.tv_status);

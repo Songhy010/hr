@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import org.json.JSONArray;
@@ -19,7 +20,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import biz.bizsolution.hrportal.R;
+import biz.bizsolution.hrportal.activity.ActivityNewTimeEntry;
 import biz.bizsolution.hrportal.adapter.AdapterPagerTimeSheet;
+import biz.bizsolution.hrportal.util.MyFunction;
 import biz.bizsolution.hrportal.util.MyViewPager;
 
 
@@ -56,6 +59,7 @@ public class FragmentTimeLogWeekly extends Fragment {
 
     private void initView() {
         initPager(array);
+        initAddRequest();
     }
 
 
@@ -111,5 +115,15 @@ public class FragmentTimeLogWeekly extends Fragment {
             tab.setCustomView(R.layout.custom_tap_in_time);
             adapterPagerTimeSheet.setTabView(i, tab);
         }
+    }
+
+    private void initAddRequest() {
+        final FloatingActionButton floatingActionButton = root_view.findViewById(R.id.fab_setup);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyFunction.getInstance().openActivity(getContext(), ActivityNewTimeEntry.class);
+            }
+        });
     }
 }

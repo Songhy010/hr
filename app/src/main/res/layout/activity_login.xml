@@ -64,7 +64,6 @@
         android:layout_marginRight="@dimen/iv_height_25"
         android:layout_marginLeft="@dimen/iv_height_25"
         android:layout_marginBottom="@dimen/iv_height_15"
-
         app:layout_constraintBottom_toTopOf="@+id/chk_remember" />
 
     <ImageView
@@ -72,10 +71,10 @@
         android:layout_height="@dimen/iv_height_40"
         android:padding="@dimen/iv_height_10"
         android:src="@drawable/img_eye"
-        android:tint="@color/grey_5"
         app:layout_constraintBottom_toBottomOf="@+id/tv_password"
         app:layout_constraintEnd_toEndOf="@+id/tv_password"
-        app:layout_constraintTop_toTopOf="@+id/tv_password" />
+        app:layout_constraintTop_toTopOf="@+id/tv_password"
+        app:tint="@color/grey_5" />
 
     <CheckBox
         android:id="@+id/chk_remember"

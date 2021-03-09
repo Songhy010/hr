@@ -29,4 +29,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
         </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_setup"
+        android:layout_margin="@dimen/iv_height_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        fab_size="normal"
+        fab_colorNormal="@color/colorPrimary"
+        elevation="@dimen/iv_height_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

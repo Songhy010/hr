@@ -37,6 +37,7 @@
     <dimen name="iv_height_10">10dp</dimen>
     <dimen name="iv_height_13">13dp</dimen>
     <dimen name="iv_height_15">15dp</dimen>
+    <dimen name="iv_height_16">16dp</dimen>
     <dimen name="iv_height_20">20dp</dimen>
     <dimen name="iv_height_22">22dp</dimen>
     <dimen name="iv_height_25">25dp</dimen>

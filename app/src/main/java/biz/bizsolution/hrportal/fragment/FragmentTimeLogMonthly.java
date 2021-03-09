@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import org.json.JSONArray;
@@ -18,8 +19,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import biz.bizsolution.hrportal.R;
+import biz.bizsolution.hrportal.activity.ActivityNewTimeEntry;
 import biz.bizsolution.hrportal.adapter.AdapterPagerTimeSheet;
 import biz.bizsolution.hrportal.adapter.AdapterTimeLogWeekly;
+import biz.bizsolution.hrportal.util.MyFunction;
 import biz.bizsolution.hrportal.util.MyViewPager;
 
 
@@ -56,6 +59,7 @@ public class FragmentTimeLogMonthly extends Fragment {
 
     private void initView(){
         initPager(array);
+        initAddRequest();
     }
 
     private void initPager(final JSONArray array) {
@@ -112,4 +116,13 @@ public class FragmentTimeLogMonthly extends Fragment {
         }
     }
 
+    private void initAddRequest() {
+        final FloatingActionButton floatingActionButton = root_view.findViewById(R.id.fab_setup);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyFunction.getInstance().openActivity(getContext(), ActivityNewTimeEntry.class);
+            }
+        });
+    }
 }
