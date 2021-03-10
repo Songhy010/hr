@@ -23,6 +23,7 @@
     <dimen name="text_size_normal">14dp</dimen>
     <dimen name="text_size_medium">18dp</dimen>
     <dimen name="text_size_large">28dp</dimen>
+    <dimen name="text_size_largex">32dp</dimen>
 
     <dimen name="text_size_urgent">11dp</dimen>
 
@@ -80,4 +81,7 @@
     <dimen name="iv_height_300">300dp</dimen>
     <dimen name="iv_height_310">310dp</dimen>
     <dimen name="iv_height_320">320dp</dimen>
+    <dimen name="iv_height_330">330dp</dimen>
+    <dimen name="iv_height_340">350dp</dimen>
+    <dimen name="iv_height_350">350dp</dimen>
 </resources>

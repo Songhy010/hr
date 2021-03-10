@@ -50,10 +50,10 @@ public class FragmentRequest extends Fragment {
     }
 
     private void initRecyclerApproval() {
-        final RecyclerView recycler_request = root_view.findViewById(R.id.recycler_request);
+        final RecyclerView recyclerRequest = root_view.findViewById(R.id.recycler_request);
         final LinearLayoutManager manager = new LinearLayoutManager(root_view.getContext(), RecyclerView.VERTICAL, false);
-        recycler_request.setLayoutManager(manager);
-        recycler_request.setAdapter(new AdapterRequest(initRequest(), root_view.getContext()));
+        recyclerRequest.setLayoutManager(manager);
+        recyclerRequest.setAdapter(new AdapterRequest(initRequest(), root_view.getContext()));
     }
 
     private JSONArray initRequest() {

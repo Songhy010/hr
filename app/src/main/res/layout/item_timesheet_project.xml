@@ -5,8 +5,8 @@
     android:paddingLeft="@dimen/iv_height_15"
     android:paddingRight="@dimen/iv_height_15"
     android:paddingTop="@dimen/iv_height_15"
-
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/view3"
         android:layout_width="@dimen/iv_height_20"

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityLeave">
+
+    <include layout="@layout/top_home_activity"
+        android:id="@+id/toolbar"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/iv_height_310"
+        android:layout_marginTop="@dimen/iv_height_5"
+        app:cardCornerRadius="@dimen/iv_height_10"
+        app:cardElevation="@dimen/iv_height_10"
+        app:cardMaxElevation="@dimen/iv_height_10"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/iv_height_10">
+
+                <com.github.lzyzsd.circleprogress.DonutProgress
+                    android:id="@+id/progress_target"
+                    android:layout_width="@dimen/iv_height_170"
+                    android:layout_height="@dimen/iv_height_170"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:backgroundTintMode="add"
+                    app:donut_text_color="@color/colorPrimary"
+                    donut_finished_color="@color/colorPrimary"
+                    donut_finished_stroke_width="12"
+                    donut_show_text="false"
+                    app:donut_show_text="false"
+                    donut_unfinished_color="@color/primary_material_light"
+                    donut_unfinished_stroke_width="12dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/iv_height_170"
+                    android:layout_height="@dimen/iv_height_170"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leaves Remains"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/tv_target_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/iv_height_15"
+                        android:text="12"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_largex" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:padding="@dimen/iv_height_20"
+                android:layout_marginTop="@dimen/iv_height_15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/iv_remain"
+                        android:layout_width="@dimen/iv_height_16"
+                        android:layout_height="@dimen/iv_height_16"
+                        app:cardCornerRadius="@dimen/iv_height_10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" >
+                        <View
+                            android:layout_margin="@dimen/iv_height_3"
+                            android:background="@drawable/shape_circle_stroke_grey"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_marginLeft="@dimen/iv_height_10"
+                        android:layout_toRightOf="@+id/iv_remain"
+                        android:text="Total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/iv_used"
+                        android:layout_width="@dimen/iv_height_16"
+                        android:layout_height="@dimen/iv_height_16"
+                        app:cardCornerRadius="@dimen/iv_height_10"
+                        android:layout_toLeftOf="@+id/tv_used" >
+                        <View
+                            android:layout_margin="@dimen/iv_height_3"
+                            android:background="@drawable/shape_circle_stroke_primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tv_used"
+                        android:layout_marginLeft="@dimen/iv_height_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_small"
+                        android:text="Used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="@dimen/iv_height_10"
+                        android:layout_toEndOf="@+id/iv_remain"
+                        android:layout_toRightOf="@+id/iv_remain"
+                        android:text="16"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/iv_height_13"
+                        android:layout_marginLeft="@dimen/iv_height_13"
+                        android:layout_marginTop="@dimen/iv_height_10"
+                        android:layout_toEndOf="@+id/iv_used"
+                        android:layout_toRightOf="@+id/iv_used"
+                        android:text="04"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="@dimen/iv_height_10"
+            android:textSize="@dimen/text_size_normal"
+            android:id="@+id/tv_my_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_request"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_view_all"
+            android:layout_marginRight="@dimen/iv_height_10"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/text_size_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_leave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_setup"
+            android:layout_margin="@dimen/iv_height_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add"
+            fab_size="normal"
+            fab_colorNormal="@color/colorPrimary"
+            elevation="@dimen/iv_height_0" />
+    </RelativeLayout>
+
+</LinearLayout>

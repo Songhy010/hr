@@ -104,7 +104,7 @@ public class ActivityHome extends AppCompatActivity {
         leaveLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyFunction.getInstance().openActivity(ActivityHome.this, ActivityRequests.class);
+                MyFunction.getInstance().openActivity(ActivityHome.this, ActivityLeave.class);
             }
         });
     }

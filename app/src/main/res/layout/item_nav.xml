@@ -20,7 +20,7 @@
         android:textStyle="bold"
         android:textSize="@dimen/text_size_normal"
         android:textColor="@color/white"
-        android:text="@string/qr_code"
+        android:text="@string/schedules"
         android:layout_marginLeft="@dimen/iv_height_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

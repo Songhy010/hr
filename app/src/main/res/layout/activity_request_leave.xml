@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityRequestLeave">
+
+    <include layout="@layout/top_home_activity"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/iv_height_15">
+
+            <TextView
+                android:id="@+id/tv_supervisor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:text="Reason"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:hint="e.g Complete Task"
+                android:id="@+id/edt_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:background="@drawable/shape_edt"
+                android:padding="@dimen/iv_height_13"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_supervisor"
+                app:layout_constraintTop_toBottomOf="@id/tv_supervisor" />
+
+            <TextView
+                android:id="@+id/tv_cover_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Cover By"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/edt_reason"
+                app:layout_constraintTop_toBottomOf="@id/edt_reason" />
+
+            <RelativeLayout
+                android:id="@+id/relative_cover_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_conver_by"
+                app:layout_constraintTop_toBottomOf="@id/tv_cover_by">
+
+                <Spinner
+                    android:id="@+id/spinner_server"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="@dimen/iv_height_5" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_type_leave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Types Of Leave"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/relative_cover_by"
+                app:layout_constraintTop_toBottomOf="@id/relative_cover_by" />
+
+            <RelativeLayout
+                android:id="@+id/relative_type_of_leave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_type_leave"
+                app:layout_constraintTop_toBottomOf="@id/tv_type_leave">
+
+                <Spinner
+                    android:id="@+id/spinner_type_of_leave"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="@dimen/iv_height_5" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Start Day"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/edt_start_date"
+                app:layout_constraintTop_toBottomOf="@id/relative_type_of_leave" />
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="End Day"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/edt_end_date"
+                app:layout_constraintTop_toBottomOf="@id/relative_type_of_leave" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/edt_start_date"
+                android:layout_width="@dimen/iv_height_180"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:background="@drawable/shape_edt"
+                android:padding="@dimen/iv_height_13"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/tv_start"
+                app:layout_constraintTop_toBottomOf="@id/tv_start" />
+
+            <ImageView
+                android:layout_width="@dimen/iv_height_40"
+                android:layout_height="@dimen/iv_height_40"
+                android:padding="@dimen/iv_height_10"
+                android:src="@drawable/ic_calender_date"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_start_date"
+                app:layout_constraintEnd_toEndOf="@+id/edt_start_date"
+                app:layout_constraintTop_toTopOf="@+id/edt_start_date"
+                app:tint="@color/colorPrimary" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/edt_end_date"
+                android:layout_width="@dimen/iv_height_180"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:background="@drawable/shape_edt"
+                android:padding="@dimen/iv_height_13"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_end" />
+
+            <ImageView
+                android:layout_width="@dimen/iv_height_40"
+                android:layout_height="@dimen/iv_height_40"
+                android:padding="@dimen/iv_height_10"
+                android:src="@drawable/ic_calender_date"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_end_date"
+                app:layout_constraintEnd_toEndOf="@+id/edt_end_date"
+                app:layout_constraintTop_toTopOf="@+id/edt_end_date"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Start Time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/edt_start_date"
+                app:layout_constraintTop_toBottomOf="@id/edt_start_date" />
+
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/edt_start_time"
+                android:layout_width="@dimen/iv_height_170"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:background="@drawable/shape_edt"
+                android:padding="@dimen/iv_height_13"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@+id/tv_start_time"
+                app:layout_constraintTop_toBottomOf="@id/tv_start_time" />
+
+            <ImageView
+                android:layout_width="@dimen/iv_height_40"
+                android:layout_height="@dimen/iv_height_40"
+                android:padding="@dimen/iv_height_10"
+                android:src="@drawable/ic_clock_tint"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_start_time"
+                app:layout_constraintEnd_toEndOf="@+id/edt_start_time"
+                app:layout_constraintTop_toTopOf="@+id/edt_start_time"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="End Time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/edt_end_date"
+                app:layout_constraintTop_toBottomOf="@id/edt_end_date" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/edt_end_time"
+                android:layout_width="@dimen/iv_height_170"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:background="@drawable/shape_edt"
+                android:padding="@dimen/iv_height_13"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@+id/tv_end_time"
+                app:layout_constraintTop_toBottomOf="@id/tv_end_time" />
+
+            <ImageView
+                android:layout_width="@dimen/iv_height_40"
+                android:layout_height="@dimen/iv_height_40"
+                android:padding="@dimen/iv_height_10"
+                android:src="@drawable/ic_clock_tint"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_end_time"
+                app:layout_constraintEnd_toEndOf="@+id/edt_end_time"
+                app:layout_constraintTop_toTopOf="@+id/edt_end_time"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_25"
+                android:text="Duration"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/edt_start_time"
+                app:layout_constraintTop_toBottomOf="@id/edt_start_time" />
+
+            <RelativeLayout
+                android:id="@+id/relative_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_day"
+                app:layout_constraintTop_toBottomOf="@id/tv_day">
+
+                <Spinner
+                    android:id="@+id/spinner_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="@dimen/iv_height_5" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:text="Duration:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/relative_day"
+                app:layout_constraintTop_toBottomOf="@id/relative_day" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/iv_height_5"
+                android:id="@+id/tv_duration_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintLeft_toRightOf="@id/tv_duration"
+                app:layout_constraintTop_toBottomOf="@id/relative_day"/>
+
+            <TextView
+                android:layout_marginLeft="@dimen/iv_height_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iv_height_10"
+                android:text="days"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintLeft_toRightOf="@id/tv_duration_days"
+                app:layout_constraintTop_toBottomOf="@id/relative_day"/>
+
+            <View
+                android:layout_width="@dimen/iv_height_0"
+                android:layout_height="@dimen/iv_height_100"
+                app:layout_constraintTop_toBottomOf="@id/tv_duration"
+                app:layout_constraintStart_toStartOf="@id/tv_duration"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_round"
+                android:text="Apply For Request"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

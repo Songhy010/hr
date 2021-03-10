@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.ActivityNewTimeEntry"></activity>
+        <activity android:name=".activity.ActivityRequest"></activity>
+        <activity android:name=".activity.ActivityRequestLeave" />
+        <activity android:name=".activity.ActivityLeave" />
+        <activity android:name=".activity.ActivityNewTimeEntry" />
         <activity android:name=".activity.ActivityAttendance" />
         <activity android:name=".activity.ActivityRequests" />
         <activity android:name=".activity.ActivityLeaveDetail" />

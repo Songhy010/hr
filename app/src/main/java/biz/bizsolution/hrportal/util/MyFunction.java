@@ -91,6 +91,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -1633,5 +1634,21 @@ public class MyFunction {
         final String[] split = str24h.split(":");
         final int intTime = Integer.parseInt(split[0]) % 12;
         return String.format("%s:%s%s", intTime == 0 ? "12" : intTime, split[1], Integer.parseInt(split[0]) > 11 ? context.getString(R.string.pm) : context.getString(R.string.am));
+    }
+
+    public String getDateFormated(final String date) {
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+            // return simpleDateFormat.format(simpleDateFormat.parse(date));
+            return new SimpleDateFormat("EEE, MMM dd, yyyy", Locale.getDefault()).format(simpleDateFormat.parse(date));
+        } catch (Exception e) {
+        }
+        return date;
+    }
+
+    public String getCurrentDate() {
+
+        final Calendar c = Calendar.getInstance();
+        return getDateFormated(c.get(Calendar.YEAR) + "-" + (c.get(Calendar.MONTH) + 1) + "-" + c.get(Calendar.DAY_OF_MONTH));
     }
 }

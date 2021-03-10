@@ -40,13 +40,12 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_project"
                 app:layout_constraintTop_toBottomOf="@id/tv_project">
 
-                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                    android:id="@+id/spinner"
+                <Spinner
+                    android:id="@+id/spinner_project"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:backgroundTint="@color/colorPrimary"
-                    android:padding="@dimen/iv_height_5"
-                    app:hintText="Select Project Title" />
+                    android:padding="@dimen/iv_height_5" />
             </RelativeLayout>
 
             <TextView
@@ -71,13 +70,12 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_service"
                 app:layout_constraintTop_toBottomOf="@id/tv_service">
 
-                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                <Spinner
                     android:id="@+id/spinner_server"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:backgroundTint="@color/colorPrimary"
-                    android:padding="@dimen/iv_height_5"
-                    app:hintText="Select Service" />
+                    android:padding="@dimen/iv_height_5" />
             </RelativeLayout>
 
             <TextView
@@ -92,12 +90,12 @@
                 app:layout_constraintTop_toBottomOf="@id/relative_service" />
 
             <EditText
+                android:focusable="false"
                 android:id="@+id/edt_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/iv_height_10"
                 android:background="@drawable/shape_edt"
-                android:hint="Select Date"
                 android:padding="@dimen/iv_height_13"
                 android:textSize="@dimen/text_size_normal"
                 app:layout_constraintEnd_toEndOf="parent"

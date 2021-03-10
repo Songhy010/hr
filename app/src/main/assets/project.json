@@ -1,0 +1,34 @@
+[
+  {
+    "id" : 1,
+    "name": "HR"
+  },
+  {
+    "id" : 2,
+    "name": "YEAC"
+  },
+  {
+    "id" : 3,
+    "name": "Soriya"
+  },
+  {
+    "id" : 4,
+    "name": "Brown"
+  },
+  {
+    "id" : 5,
+    "name": "Dealer"
+  },
+  {
+    "id" : 6,
+    "name": "Wholesale"
+  },
+  {
+    "id" : 7,
+    "name": "LG Brandshop"
+  },
+  {
+    "id" : 8,
+    "name": "Phum Keyboard"
+  }
+]

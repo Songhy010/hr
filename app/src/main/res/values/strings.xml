@@ -32,10 +32,11 @@
     <string name="time_sheet">Time Sheet</string>
     <string name="leave">Leave</string>
     <string name="over_time">Over Time</string>
+    <string name="announcement">Announcement</string>
     <string name="training">Training</string>
-    <string name="payslip">Leave</string>
+    <string name="payslip">PaySlip</string>
     <string name="expense">Expense</string>
-    <string name="qr_code">QR Code</string>
+    <string name="schedules">Schedules</string>
 
     <!--Profile-->
     <string name="title_pro">Profile Setting</string>
@@ -49,6 +50,8 @@
     <string name="leave_detail">Leave Details</string>
     <string name="request">Request</string>
     <string name="approval">Approval</string>
+    <string name="my_leave">My Leaves</string>
+    <string name="request_leave">Request Leaves</string>
 
     <!--Language-->
     <string name="change_language">Do you want to change language</string>

@@ -51,5 +51,7 @@
 
     <color name="orange">#F1A942</color>
     <color name="green">#29BC49</color>
+    <color name="light_grey">#E5E5E5</color>
+
 
 </resources>
